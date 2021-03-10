@@ -6,7 +6,7 @@ BRANDS = ["Uggs", "Rainbow"]
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brand unless brand.any? {|b| b == brand}
   end
 
   def cobble
